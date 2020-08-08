@@ -1,11 +1,12 @@
 import React from 'react'
 
-// import { FiLogOut } from 'react-icons/fi'
+import { FiLogOut } from 'react-icons/fi'
 
 import { useAuth } from '../../hooks/auth'
 
+import { Container, Content, Background, AnimationContainer } from './styles'
+
 import Button from '../../components/Button'
-import { Container, Content, Background } from './styles'
 
 const Dashboard: React.FC = () => {
   const { signOut } = useAuth()
@@ -13,12 +14,17 @@ const Dashboard: React.FC = () => {
   return (
     <>
       <Container>
-        <Content>
-          <h1>Dashboard</h1>
-          <Button onClick={signOut}>logOut</Button>
-        </Content>
-
         <Background />
+
+        <Content>
+          <Button onClick={signOut}>
+            <FiLogOut />
+          </Button>
+
+          <AnimationContainer>
+            <h1>Dashboard</h1>
+          </AnimationContainer>
+        </Content>
       </Container>
 
     </>

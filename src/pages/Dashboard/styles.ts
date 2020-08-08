@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 
-import signOutBackgroundImg from '../../assets/dashboard-background.png'
+import signOutBackgroundImg from '../../assets/dashboard-background.jpg'
 
 export const Container = styled.div`
   height: 100vh;
@@ -10,23 +10,21 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  margin-left: 20px;
 
   width: 100%;
   max-width: 700px;
 
-  h1 {
-    margin-left: 17px;
-  }
-
   Button {
-    width: 25%;
-    margin-left: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 6%;
+    height: 36px;
   }
 `
 const appearFromCenter = keyframes`
