@@ -25,3 +25,5 @@ E após user for autenticado, logar na aplicacao, irá para a rota autenticada, 
 
 
 Extra: Removemos o token e user do storage com o método signOut do hook useAuth e fazemos o logOut da aplicacao
+
+![gobarber](https://user-images.githubusercontent.com/45858897/89723423-53c1ff80-d9cc-11ea-97ec-78b23a2e50ec.gif)
