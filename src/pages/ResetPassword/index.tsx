@@ -45,7 +45,7 @@ const SignIn: React.FC = () => {
         abortEarly: false
       })
       const { password, password_confirmation } = data
-      const token = location.search.replace('?token', '')
+      const token = location.search.replace('?token=', '')
 
       if (!token) {
         throw new Error()
@@ -57,7 +57,7 @@ const SignIn: React.FC = () => {
         token
       })
 
-      history.push('/signin')
+      history.push('/')
     } catch (err) {
       if (err instanceof Yup.ValidationError) {
         const errors = getValidationErrors(err)
