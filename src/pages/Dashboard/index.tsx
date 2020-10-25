@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import {
   Container,
@@ -8,6 +8,8 @@ import {
   Content,
   Schedule,
   NextAppointment,
+  Section,
+  Appointment,
   Calendar
 } from './styles'
 
@@ -16,6 +18,8 @@ import { FiPower, FiClock } from 'react-icons/fi'
 import { useAuth } from '../../hooks/auth'
 
 const Dashboard: React.FC = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date())
+
   const { signOut, user } = useAuth()
 
   return (
@@ -65,6 +69,47 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </NextAppointment>
+
+          <Section>
+            <strong>Manhã</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars1.githubusercontent.com/u/45858897?s=460&u=803727c42776f9f96ae9be296b75362e1cd23c38&v=4"
+                  alt="Carlos Roberto"
+                />
+
+                <strong>Carlos Roberto</strong>
+              </div>
+            </Appointment>
+
+          </Section>
+
+          <Section>
+            <strong>Tarde</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+
+              <div>
+                <img
+                  src="https://avatars1.githubusercontent.com/u/45858897?s=460&u=803727c42776f9f96ae9be296b75362e1cd23c38&v=4"
+                  alt="Carlos Roberto"
+                />
+
+                <strong>Carlos Roberto</strong>
+              </div>
+            </Appointment>
+          </Section>
         </Schedule>
         <Calendar />
       </Content>
