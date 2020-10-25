@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react'
+import React, { useRef, useCallback, useState } from 'react'
 import { FiLogIn, FiMail } from 'react-icons/fi'
 import { FormHandles } from '@unform/core'
 import { Form } from '@unform/web'
@@ -15,18 +15,22 @@ import Input from '../../components/Input'
 import Button from '../../components/Button'
 
 import { Container, Content, AnimationContainer, Background } from './styles'
+import api from '../../services/api'
 
 interface ForgotPasswordFormData {
   email: string
 }
 
 const ForgotPassword: React.FC = () => {
+  const [loading, setLoading] = useState(false)
   const formRef = useRef<FormHandles>(null)
 
   const { addToast } = useToast()
 
   const handleSubmit = useCallback(async (data: ForgotPasswordFormData) => {
     try {
+      setLoading(true)
+
       formRef.current?.setErrors({})
 
       const schema = Yup.object().shape({
@@ -40,6 +44,18 @@ const ForgotPassword: React.FC = () => {
       })
 
       // recuperacao de senha
+
+      await api.post('/password/forgot', {
+        email: data.email
+
+      })
+
+      addToast({
+        type: 'success',
+        title: 'E-mail de recuperacao enviado',
+        description:
+          'Enviamos um e-mail para confirmar a recuperacao de senha, cheque sua caixa de entrada'
+      })
 
       // history.push('/dashboard')
     } catch (err) {
@@ -56,8 +72,12 @@ const ForgotPassword: React.FC = () => {
         title: 'Erro na recuperacao de senha',
         description: 'Ocorreu um erro ao tentar realizar a recuperacao de senha, tente novamente.'
       })
+    } finally {
+      setLoading(false)
     }
-  }, [addToast])
+  },
+  [addToast]
+  )
 
   return (
     <Container>
@@ -70,9 +90,9 @@ const ForgotPassword: React.FC = () => {
 
             <Input name="email" icon={FiMail} placeholder="E-mail" />
 
-            <Button type="submit">Recuperar</Button>
+            <Button loading={loading} type="submit">Recuperar</Button>
 
-            <a href="forgot">Esqueci minha senha</a>
+            <Link to="forgot">Esqueci minha senha</Link>
           </Form>
 
           <Link to="/signup">
