@@ -25,6 +25,7 @@ export const Content = styled.div`
     right: 20px;
     width: 6%;
     height: 36px;
+    background: #312e38;
   }
 `
 const appearFromCenter = keyframes`

@@ -18,7 +18,7 @@ const Dashboard: React.FC = () => {
 
         <Content>
           <Button onClick={signOut}>
-            <FiLogOut />
+            <FiLogOut color='#ff9000' size={20}/>
           </Button>
 
           <AnimationContainer>
