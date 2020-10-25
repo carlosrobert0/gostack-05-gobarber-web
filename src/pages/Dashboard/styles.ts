@@ -1,55 +1,58 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
-import signOutBackgroundImg from '../../assets/dashboard-background.jpg'
+export const Container = styled.div``
 
-export const Container = styled.div`
-  height: 100vh;
-
-  display: flex;
-  align-items: stretch;
+export const Header = styled.header`
+  padding: 32px 0;
+  background: #28262e;
 `
 
-export const Content = styled.div`
-  position: relative;
+export const HeaderContent = styled.div`
+  max-width: 1120px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
 
-  width: 100%;
-  max-width: 700px;
+  > img {
+    height: 80px;
+  }
 
-  Button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 6%;
-    height: 36px;
-    background: #312e38;
-  }
-`
-const appearFromCenter = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(0px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
+  button {
+    margin-left: auto;
+    background: transparent;
+    border: 0;
+
+    svg {
+      color #999591;
+      width: 20px;
+      height: 20px;
+    }
   }
 `
 
-export const AnimationContainer = styled.div`
+export const Profile = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  margin-left: 80px;
 
-  animation: ${appearFromCenter} 1s;
-`
+  img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+  }
 
-export const Background = styled.div`
-  flex: 1;
-  background: url(${signOutBackgroundImg}) no-repeat center;
-  background-size: cover;
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    line-height: 24px;
+
+    span {
+      color: #f4ede8;
+    }
+
+    strong {
+      color: #ff9000;
+    }
+  }
 `
