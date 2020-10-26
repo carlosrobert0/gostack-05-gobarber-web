@@ -52,6 +52,7 @@
     "source.fixAll.eslint": true
   },
   "devDependencies": {
+    "@types/date-fns": "^2.6.0",
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.1",
     "@types/yup": "^0.29.4",
