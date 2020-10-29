@@ -29,17 +29,16 @@ usei o Button e ao clicar o metodo signOut exclui o token e user do Storage e re
 ![gobarber](https://user-images.githubusercontent.com/45858897/89723423-53c1ff80-d9cc-11ea-97ec-78b23a2e50ec.gif)
 
 <h3>Parte 2 e Finalização do front end web da aplicacao GoBarber</h3>
-<ul>
 
       GoBarber com algumas alterações e inclusões:
 
 
-    <li> Ajustes na API </li>
+    - Ajustes na API
 
 Foram feitos ajustes na API para comportar as novas funcionalidades do frontend
 
 
-    <li> Recuperacao de senha </li>
+    - Recuperacao de senha 
 
 Criamos a pagina de recuperacao de senha
 
@@ -52,7 +51,7 @@ Criamos a pagina de redefinicao da senha
 na qual o usuario informa a nova senha e é redirecionado para o SignIn para logar com sua nova senha
 
 
-    <li> Dashboard </li>
+    - Dashboard 
 
 Criamos a pagina de dashboard com Header
 
@@ -65,12 +64,11 @@ buscamos os agendamentos da API e exibimos
 em tela, separando por periodo da manha e tarde
 
 
-    <li> Perfil do usuario </li>
+    - Perfil do usuario 
 
 Criamos a pagina de perfil do usuario
 
 com opcao de trocar de avatar, e alteracao dos dados 
-</ul>
 
 ![sr](https://user-images.githubusercontent.com/45858897/97576937-8416aa00-19cd-11eb-8ed2-4b923a3ff14a.gif)
 
