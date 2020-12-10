@@ -66,6 +66,7 @@
     "source.fixAll.eslint": true
   },
   "devDependencies": {
+    "@testing-library/react-hooks": "^3.7.0",
     "@types/date-fns": "^2.6.0",
     "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "^5.1.1",
@@ -82,6 +83,7 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "2.5.0",
     "jest-environment-jsdom-sixteen": "^1.0.3",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "react-test-renderer": "^17.0.1"
   }
 }
